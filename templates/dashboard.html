@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+</head>
+<body>
+<h1>Dashboard</h1>
+<h2>Your Notes</h2>
+<a href="/add">Add Note</a>
+<a href="/logout">Logout</a>
+<hr>
+
+{% for note in notes %}
+  <h3>{{ note.title }}</h3>
+  <p>{{ note.content }}</p>
+  <a href="/edit/{{ note.id }}">Edit</a>
+  <a href="/delete/{{ note.id }}">Delete</a>
+  <hr>
+{% endfor %}
+
+</body>
+</html>

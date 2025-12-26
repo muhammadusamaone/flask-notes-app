@@ -1,0 +1,16 @@
+{
+  "start": "gunicorn app:app",
+  "watch": [
+    "app.py",
+    "templates/**",
+    "static/**",
+    "requirements.txt"
+  ],
+  "env": {
+    "SECRET_KEY": "mysupersecret"
+  },
+  "region": "mumbai",
+  "serverless": true,
+  "restartPolicy": "always",
+  "maxRestartRetries": 3
+}
